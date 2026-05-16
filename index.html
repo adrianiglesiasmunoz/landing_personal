@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrián Iglesias Muñoz | AI & Operations Specialist</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488', // Teal principal
+                            700: '#0f766e',
+                            900: '#134e4a',
+                        },
+                        slate: {
+                            850: '#152033',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animaciones personalizadas */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Patrón sutil para el hero */
+        .bg-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-heading font-bold text-xl">
+                        AI
+                    </div>
+                    <span class="font-heading font-bold text-xl text-slate-800">Adrián Iglesias</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Visión</a>
+                    <a href="#skills" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Competencias</a>
+                    <a href="#projects" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Proyectos</a>
+                    <a href="#experience" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Trayectoria</a>
+                    <a href="https://www.linkedin.com/in/adrián-iglesias-muñoz" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-5 py-2.5 rounded-lg font-medium transition-all shadow-sm hover:shadow flex items-center gap-2">
+                        <i class="fab fa-linkedin"></i> Conectar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-pattern">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/60 to-slate-50 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 font-medium text-sm mb-6">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                        </span>
+                        Traffic Controller & AI Specialist
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 leading-tight mb-6">
+                        Transformando datos en <span class="text-brand-600">estrategias rentables</span> y escalables.
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
+                        Experto en gestión operativa y análisis de rendimiento en Contact Centers. Combino una sólida visión analítica con competencias técnicas en Inteligencia Artificial y arquitecturas No-Code para optimizar flujos de trabajo.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-brand-600 hover:bg-brand-700 text-white px-7 py-3 rounded-xl font-medium transition-all shadow-lg shadow-brand-600/30 flex items-center gap-2">
+                            Ver proyectos <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#experience" class="bg-white border border-slate-200 hover:border-slate-300 text-slate-700 hover:bg-slate-50 px-7 py-3 rounded-xl font-medium transition-all flex items-center gap-2">
+                            Conoce mi trayectoria
+                        </a>
+                    </div>
+                </div>
+               <div class="relative mx-auto lg:ml-auto w-full max-w-md fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-teal-300 rounded-[2rem] transform rotate-3 opacity-20 scale-105"></div>
+                    <!-- RUTA RELATIVA: Asegúrate de que la imagen esté en la misma carpeta que este archivo HTML -->
+                    <img src="foto_perfil_lkd_cv.jpeg" alt="Adrián Iglesias Muñoz" class="relative rounded-[2rem] shadow-2xl object-cover w-full aspect-[4/5] z-10 border-4 border-white">
+                    
+                    <!-- Insignia flotante -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl z-20 flex items-center gap-4 border border-slate-100">
+                        <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white text-xl">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Data-Driven</p>
+                            <p class="text-sm font-bold text-slate-800">Decisiones basadas en datos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Visión -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in-up">
+                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Mi Visión Operativa</h2>
+                <div class="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-8"></div>
+                <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                    Concibo este espacio como un portafolio vivo donde documento mis implementaciones y metodologías. Mi día a día consiste en garantizar la eficiencia operativa de plataformas complejas, pero mi enfoque va un paso más allá: <strong>cuestionar el <i>status quo</i> de los procesos repetitivos.</strong>
+                </p>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Aplico soluciones de Automatización (Make, n8n) e IA Generativa no solo como exploración tecnológica, sino con un fin claro: reducir tiempos de gestión, potenciar la productividad y elevar la calidad analítica. Siempre estoy abierto a conectar con la comunidad de Operations y Tech para compartir aprendizajes e intercambiar ideas sobre la evolución de nuestro sector.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Competencias -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-4">Competencias Core</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">La convergencia entre la gestión de personas, el análisis de datos y la automatización inteligente.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow fade-in-up">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-3">Gestión de Operaciones</h3>
+                    <p class="text-slate-600 mb-4">Monitorización y gestión integral del rendimiento en Contact Centers, control de KPIs de campañas y agentes, y soporte funcional.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Genesys Cloud</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Workforce Management</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Gestión de KPIs (AHT, SLA, etc.)</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow fade-in-up" style="transition-delay: 0.1s;">
+                    <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-3">Análisis de Datos</h3>
+                    <p class="text-slate-600 mb-4">Extracción, modelado y visualización de datos operativos para identificar cuellos de botella y proponer mejoras estratégicas.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Microsoft Power BI</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Microsoft Excel (Avanzado)</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> eMite (Real-time Dashboards)</li>
+                    </ul>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition-shadow fade-in-up" style="transition-delay: 0.2s;">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-slate-900 mb-3">IA & Automatización</h3>
+                    <p class="text-slate-600 mb-4">Diseño de arquitecturas No-Code y aplicación de modelos fundacionales para la transformación de procesos manuales.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Make & n8n (Workflows)</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Prompt Engineering</li>
+                        <li class="flex items-center gap-2 text-sm text-slate-700"><i class="fas fa-check text-brand-500"></i> Implementación LLMs (OpenAI, Gemini)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 fade-in-up">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-heading font-bold text-slate-900 mb-4">Proyectos Destacados</h2>
+                    <p class="text-slate-600">Casos de uso reales donde la tecnología se pone al servicio de la eficiencia operativa y el negocio.</p>
+                </div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Proyecto 1 -->
+                <div class="group relative bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden hover:border-brand-300 transition-colors fade-in-up">
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <div class="lg:col-span-3 p-8 md:p-12">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Iniciativa Tecnológica</span>
+                                <span class="text-slate-500 text-sm"><i class="far fa-calendar-alt"></i> 2026 - Actualidad</span>
+                            </div>
+                            <h3 class="text-2xl font-heading font-bold text-slate-900 mb-4">Desarrollo de Workflows de Automatización (Make/n8n) y Dashboards (Power BI)</h3>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Proyecto enfocado en la detección de cuellos de botella administrativos y operativos, y su resolución mediante arquitecturas de Inteligencia Artificial y herramientas No-Code. El objetivo central es transformar procesos repetitivos en flujos de trabajo autónomos.
+                            </p>
+                            <div class="space-y-4 mb-8">
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 text-slate-600">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-900">Reporting Automatizado</h4>
+                                        <p class="text-sm text-slate-600">Diseño de cuadros de mando en Power BI eliminando actualizaciones manuales e integrando fuentes dispares.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 text-slate-600">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-900">Orquestación de Flujos</h4>
+                                        <p class="text-sm text-slate-600">Creación de escenarios en n8n y Make para conectar CRMs y Workspace con LLMs, logrando reducción de tiempos del 40-60%.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">Power BI</span>
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">n8n</span>
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">Make</span>
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">OpenAI API</span>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2 bg-slate-800 relative min-h-[300px] flex items-center justify-center p-8 overflow-hidden">
+                            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+                            <div class="relative z-10 w-full max-w-sm bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-xl p-6 shadow-2xl">
+                                <div class="flex items-center justify-between mb-4 border-b border-slate-700 pb-4">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                    </div>
+                                    <span class="text-slate-400 text-xs font-mono">workflow.json</span>
+                                </div>
+                                <div class="space-y-3 font-mono text-sm">
+                                    <div class="flex items-center gap-3 text-brand-400"><i class="fas fa-play-circle"></i> Trigger: Webhook</div>
+                                    <div class="pl-6 border-l-2 border-slate-700 ml-2 space-y-3">
+                                        <div class="flex items-center gap-3 text-blue-400"><i class="fas fa-database"></i> Fetch Data (CRM)</div>
+                                        <div class="flex items-center gap-3 text-purple-400"><i class="fas fa-brain"></i> LLM Process (OpenAI)</div>
+                                        <div class="flex items-center gap-3 text-yellow-400"><i class="fas fa-chart-pie"></i> Update PowerBI Dataset</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="group relative bg-slate-50 rounded-3xl border border-slate-200 overflow-hidden hover:border-brand-300 transition-colors fade-in-up">
+                    <div class="grid lg:grid-cols-5 gap-0">
+                        <div class="lg:col-span-2 bg-slate-100 relative min-h-[300px] flex items-center justify-center p-8 border-r border-slate-200 order-last lg:order-first">
+                             <div class="relative z-10 w-full max-w-sm bg-white border border-slate-200 rounded-xl p-6 shadow-xl">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h4 class="font-bold text-slate-800">eMite Dashboard</h4>
+                                    <i class="fas fa-ellipsis-h text-slate-400"></i>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-brand-50 p-3 rounded-lg border border-brand-100">
+                                        <p class="text-xs text-brand-600 font-semibold mb-1">SLA Global</p>
+                                        <p class="text-2xl font-bold text-brand-700">94.2%</p>
+                                    </div>
+                                    <div class="bg-blue-50 p-3 rounded-lg border border-blue-100">
+                                        <p class="text-xs text-blue-600 font-semibold mb-1">Volumen Vol.</p>
+                                        <p class="text-2xl font-bold text-blue-700">12.4K</p>
+                                    </div>
+                                </div>
+                                <div class="h-20 w-full bg-gradient-to-t from-slate-100 to-white rounded flex items-end justify-between px-2 pb-2 gap-1">
+                                    <div class="w-1/6 bg-brand-300 rounded-t h-1/3"></div>
+                                    <div class="w-1/6 bg-brand-400 rounded-t h-1/2"></div>
+                                    <div class="w-1/6 bg-brand-500 rounded-t h-3/4"></div>
+                                    <div class="w-1/6 bg-brand-400 rounded-t h-2/3"></div>
+                                    <div class="w-1/6 bg-brand-600 rounded-t h-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3 p-8 md:p-12">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Transformación Digital</span>
+                                <span class="text-slate-500 text-sm"><i class="far fa-calendar-alt"></i> Oct 2021 - Jul 2022</span>
+                            </div>
+                            <h3 class="text-2xl font-heading font-bold text-slate-900 mb-4">Migración Integral del Contact Center a Genesys Cloud</h3>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Participación estratégica liderando la transición desde un entorno On Premise hacia la plataforma Genesys Cloud. Coordinación con partner tecnológico (Evolutio) para la migración progresiva de campañas, agentes y canales (voz, email, chat, SMS).
+                            </p>
+                            <ul class="space-y-3 mb-8 text-slate-600">
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                                    <span>Validación operativa de nuevos servicios y monitorización post-implantación.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                                    <span>Explotación autónoma de <strong>eMite</strong>, creando dashboards y wallboards en tiempo real adaptados a operativas específicas.</span>
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">Genesys Cloud</span>
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">eMite</span>
+                                <span class="text-xs font-medium bg-slate-200 text-slate-700 px-3 py-1 rounded-md">Gestión de Proyectos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Experiencia y Educación -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
+            
+            <!-- Experiencia -->
+            <div>
+                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-10 flex items-center gap-3">
+                    <i class="fas fa-briefcase text-brand-600"></i> Trayectoria Profesional
+                </h2>
+                <div class="relative border-l-2 border-slate-200 ml-4 space-y-10">
+                    
+                    <!-- Puesto 1 -->
+                    <div class="relative pl-8 fade-in-up">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 bg-brand-500 rounded-full border-4 border-slate-50"></div>
+                        <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="text-sm font-bold text-brand-600 tracking-wider uppercase mb-1 block">Abr 2018 - Actualidad</span>
+                            <h3 class="text-xl font-bold text-slate-900">Traffic Controller</h3>
+                            <p class="text-slate-500 font-medium mb-4">EOS Spain</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Análisis integral de datos operativos y gestión del rendimiento. Responsable del seguimiento de KPIs en campañas y agentes. Encargado del soporte técnico de nivel 1 de la plataforma, asegurando la continuidad del negocio y optimizando las lógicas de enrutamiento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 2 -->
+                    <div class="relative pl-8 fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-300 rounded-full border-4 border-slate-50"></div>
+                        <div class="group">
+                            <span class="text-sm font-bold text-slate-500 tracking-wider uppercase mb-1 block">May 2012 - Abr 2018</span>
+                            <h3 class="text-xl font-bold text-slate-900">Gestor Telefónico de Recobro</h3>
+                            <p class="text-slate-500 font-medium mb-2">EOS Spain</p>
+                            <p class="text-slate-600 text-sm">Gestión telefónica y negociación de carteras de impagados en el exigente sector bancario y financiero. Desarrollo de fuertes habilidades de comunicación, resiliencia y orientación a objetivos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Puesto 3 -->
+                    <div class="relative pl-8 fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-300 rounded-full border-4 border-slate-50"></div>
+                        <div class="group">
+                            <span class="text-sm font-bold text-slate-500 tracking-wider uppercase mb-1 block">2007 - 2011</span>
+                            <h3 class="text-lg font-bold text-slate-900">Roles Previos</h3>
+                            <p class="text-slate-600 text-sm">Experiencia consolidada en departamentos de Preimpresión (Coreti Etiquetas) como Técnico en Serigrafía, y roles administrativos/control de stock (Interior Dekor), forjando una ética de trabajo rigurosa.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Educación y Certificados -->
+            <div>
+                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-10 flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-brand-600"></i> Formación Académica
+                </h2>
+                
+                <div class="space-y-6">
+                    <!-- Edu 1 -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex gap-4 items-start fade-in-up">
+                        <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-brand-600 tracking-wider uppercase mb-1 block">Finaliza: Oct 2025</span>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-1">Executive Master Power IA</h3>
+                            <p class="text-slate-600 text-sm">Inteligencia Artificial aplicada a negocio.</p>
+                            <p class="text-slate-500 text-sm font-medium mt-1">ThePower Business School</p>
+                        </div>
+                    </div>
+
+                    <!-- Edu 2 -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex gap-4 items-start fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 tracking-wider uppercase mb-1 block">Actualidad</span>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-1">Power BI: Transformación Digital con IA</h3>
+                            <p class="text-slate-500 text-sm font-medium mt-1">Udemy</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Bloque de Certificaciones -->
+                    <div class="bg-slate-800 text-white p-6 rounded-xl shadow-lg mt-8 fade-in-up" style="transition-delay: 0.2s;">
+                        <h4 class="font-heading font-bold text-lg mb-4 flex items-center gap-2">
+                            <i class="fab fa-google text-brand-400"></i> Google Cloud Skills Boost
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-slate-300">
+                                <i class="fas fa-certificate text-brand-500"></i> Introduction to Generative AI
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-slate-300">
+                                <i class="fas fa-certificate text-brand-500"></i> Introduction to Large Language Models
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-slate-300">
+                                <i class="fas fa-certificate text-brand-500"></i> Introduction to Responsible AI
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Edu 3 -->
+                    <div class="flex gap-4 items-start px-2 mt-6 fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="w-10 h-10 bg-slate-200 text-slate-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-md font-bold text-slate-800">CFGM Sistemas Microinformáticos y Redes</h3>
+                            <p class="text-slate-500 text-sm">ILERNA FP (2016 - 2018)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-heading font-bold text-white mb-6">¿Exploramos sinergias?</h2>
+            <p class="text-slate-400 mb-10 text-lg">
+                La mejora continua nace de compartir conocimientos. Si te interesan las operaciones, el análisis de datos o cómo la IA está transformando el sector, me encantará conectar contigo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <a href="https://www.linkedin.com/in/adrián-iglesias-muñoz" target="_blank" class="bg-[#0A66C2] hover:bg-[#004182] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg flex items-center justify-center gap-3 text-lg">
+                    <i class="fab fa-linkedin text-2xl"></i> Conectar en LinkedIn
+                </a>
+                <a href="mailto:adrianiglesiasmunoz@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold transition-all border border-slate-700 hover:border-slate-500 flex items-center justify-center gap-3 text-lg">
+                    <i class="fas fa-envelope text-xl"></i> Enviar Email
+                </a>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <p>&copy; 2026 Adrián Iglesias Muñoz. A Coruña, Galicia.</p>
+                <div class="flex gap-4">
+                    <span class="flex items-center gap-1"><i class="fas fa-car"></i> Vehículo propio</span>
+                    <span class="flex items-center gap-1"><i class="fas fa-language"></i> Inglés Alto | ES/GAL Nativo</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Interactivos -->
+    <script>
+        // Animación de revelado al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Estilo del Navbar al hacer scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-md');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
