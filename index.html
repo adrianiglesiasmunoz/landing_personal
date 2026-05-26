@@ -7,7 +7,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -53,6 +53,20 @@
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
             background-size: 24px 24px;
         }
+
+        /* Animación para la marquesina de tecnologías */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
@@ -68,7 +82,7 @@
                     <span class="font-heading font-bold text-xl text-slate-800">Adrián Iglesias</span>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Visión</a>
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Sobre mí</a>
                     <a href="#skills" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Competencias</a>
                     <a href="#projects" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Proyectos</a>
                     <a href="#experience" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Trayectoria</a>
@@ -94,10 +108,10 @@
                         Traffic Controller & AI Specialist
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 leading-tight mb-6">
-                        Transformando datos en <span class="text-brand-600">estrategias rentables</span> y escalables.
+                        Transformando datos en <span class="text-brand-600">estrategias.</span>
                     </h1>
                     <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
-                        Experto en gestión operativa y análisis de rendimiento en Contact Centers. Combino una sólida visión analítica con competencias técnicas en Inteligencia Artificial y arquitecturas No-Code para optimizar flujos de trabajo.
+                        ¡Hola!, soy Adrián. Experto en gestión operativa y análisis de rendimiento en Contact Centers. Combino una sólida visión analítica con competencias técnicas en Inteligencia Artificial y arquitecturas No-Code para optimizar flujos de trabajo.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="#projects" class="bg-brand-600 hover:bg-brand-700 text-white px-7 py-3 rounded-xl font-medium transition-all shadow-lg shadow-brand-600/30 flex items-center gap-2">
@@ -128,18 +142,58 @@
         </div>
     </section>
 
+    <!-- Marquesina de Stack Técnico -->
+    <div class="bg-white border-y border-slate-200 py-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 flex items-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 mr-8 whitespace-nowrap"><i class="fas fa-tools mr-2 text-brand-600"></i> Stack técnico</span>
+            <div class="relative w-full overflow-hidden">
+                <div class="animate-marquee flex gap-12 text-slate-600 font-medium">
+                    <span class="flex items-center gap-2"><b class="text-brand-600">PWR</b> Power BI Desktop</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">DAX</b> DAX & M (Power Query)</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">LLM</b> Claude / LLM</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">CC</b> Genesys Cloud</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">KPI</b> eMite Analytics</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">AUT</b> Make (Integromat)</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">XLS</b> Excel Avanzado</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">OFC</b> Outlook & Loop</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">WFM</b> Workforce Management</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">AI</b> Prompt Engineering</span>
+                    <!-- Duplicado para loop infinito sin saltos -->
+                    <span class="flex items-center gap-2"><b class="text-brand-600">PWR</b> Power BI Desktop</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">DAX</b> DAX & M (Power Query)</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">LLM</b> Claude / LLM</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">CC</b> Genesys Cloud</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">KPI</b> eMite Analytics</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">AUT</b> Make (Integromat)</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">XLS</b> Excel Avanzado</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">OFC</b> Outlook & Loop</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">WFM</b> Workforce Management</span>
+                    <span class="flex items-center gap-2"><b class="text-brand-600">AI</b> Prompt Engineering</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Sección Visión -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center fade-in-up">
-                <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Mi Visión Operativa</h2>
-                <div class="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-8"></div>
-                <p class="text-lg text-slate-600 leading-relaxed mb-6">
-                    Concibo este espacio como un portafolio vivo donde documento mis implementaciones y metodologías. Mi día a día consiste en garantizar la eficiencia operativa de plataformas complejas, pero mi enfoque va un paso más allá: <strong>cuestionar el <i>status quo</i> de los procesos repetitivos.</strong>
-                </p>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Aplico soluciones de Automatización (Make, n8n) e IA Generativa no solo como exploración tecnológica, sino con un fin claro: reducir tiempos de gestión, potenciar la productividad y elevar la calidad analítica. Siempre estoy abierto a conectar con la comunidad de Operations y Tech para compartir aprendizajes e intercambiar ideas sobre la evolución de nuestro sector.
-                </p>
+            <div class="grid lg:grid-cols-3 gap-12 items-start">
+                <div class="lg:col-span-1 fade-in-up">
+                    <span class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2 block"><i class="fas fa-user-circle mr-2"></i> Sobre mí</span>
+                    <h2 class="text-3xl font-heading font-bold text-slate-900 leading-tight">Datos, operaciones e inteligencia artificial.</h2>
+                    <div class="w-12 h-1 bg-brand-600 rounded-full mt-4"></div>
+                </div>
+                <div class="lg:col-span-2 text-slate-600 space-y-6 leading-relaxed text-lg fade-in-up" style="transition-delay: 0.15s;">
+                    <p>
+                        Profesional de operaciones en EOS Spain con más de 15 años de trayectoria. Como Traffic Controller, monitorizo en tiempo real el rendimiento de agentes y campañas del Contact Center, gestiono KPIs críticos de negocio y resuelvo incidencias técnicas de la plataforma, con impacto directo en los resultados.
+                    </p>
+                    <p>
+                        En paralelo, he desarrollado competencias técnicas sólidas en <strong>análisis de datos e inteligencia artificial aplicada</strong>: desde dashboards avanzados en Power BI hasta la automatización de flujos de trabajo con Make y n8n, integrando soluciones con IA para reducir tiempos de gestión en un 40-60%.
+                    </p>
+                    <p>
+                        Lo que me distingue es la combinación de <strong>conocimiento profundo del negocio operativo</strong> con capacidad técnica real: sé qué métricas importan, cómo construirlas y cómo hacer que los datos trabajen solos. Me considero un perfil versátil, orientado a la mejora continua y a la innovación práctica en entornos reales.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -149,7 +203,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
                 <h2 class="text-3xl font-heading font-bold text-slate-900 mb-4">Competencias Core</h2>
-                <p class="text-slate-600 max-w-2xl mx-auto">La convergencia entre la gestión de personas, el análisis de datos y la automatización inteligente.</p>
+                <p class="text-slate-600 max-w-2xl mx-auto">Las áreas en las que trabajo a diario y donde sigo formándome.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -204,7 +258,7 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 fade-in-up">
                 <div class="max-w-2xl">
                     <h2 class="text-3xl font-heading font-bold text-slate-900 mb-4">Proyectos Destacados</h2>
-                    <p class="text-slate-600">Casos de uso reales donde la tecnología se pone al servicio de la eficiencia operativa y el negocio.</p>
+                    <p class="text-slate-600">Iniciativas profesionales y personales que reflejan cómo aplico lo que aprendo.</p>
                 </div>
             </div>
 
@@ -219,7 +273,7 @@
                             </div>
                             <h3 class="text-2xl font-heading font-bold text-slate-900 mb-4">Desarrollo de Workflows de Automatización (Make/n8n) y Dashboards (Power BI)</h3>
                             <p class="text-slate-600 mb-6 leading-relaxed">
-                                Proyecto enfocado en la detección de cuellos de botella administrativos y operativos, y su resolución mediante arquitecturas de Inteligencia Artificial y herramientas No-Code. El objetivo central es transformar procesos repetitivos en flujos de trabajo autónomos.
+                                Proyecto personal enfocado en la detección de cuellos de botella administrativos y operativos, y su resolución mediante arquitecturas de Inteligencia Artificial y herramientas No-Code. El objetivo central es transformar procesos repetitivos en flujos de trabajo autónomos, documentando y estandarizando las soluciones para su implementación en entornos reales.
                             </p>
                             <div class="space-y-4 mb-8">
                                 <div class="flex gap-4">
@@ -228,7 +282,7 @@
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-slate-900">Reporting Automatizado</h4>
-                                        <p class="text-sm text-slate-600">Diseño de cuadros de mando en Power BI eliminando actualizaciones manuales e integrando fuentes dispares.</p>
+                                        <p class="text-sm text-slate-600">Diseño de dashboards en Power BI eliminando actualizaciones manuales e integrando fuentes de datos dispares en tiempo real.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-4">
@@ -237,7 +291,16 @@
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-slate-900">Orquestación de Flujos</h4>
-                                        <p class="text-sm text-slate-600">Creación de escenarios en n8n y Make para conectar CRMs y Workspace con LLMs, logrando reducción de tiempos del 40-60%.</p>
+                                        <p class="text-sm text-slate-600">Workflows en n8n y Make conectando herramientas corporativas (Google Workspace, CRMs) con modelos LLM (OpenAI, Gemini, Claude...), reduciendo tiempos de gestión en un 40-60%</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center flex-shrink-0 text-slate-600">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-slate-900">Estandarización de Procesos</h4>
+                                        <p class="text-sm text-slate-600">Empaquetado de estas soluciones en plantillas reutilizables y escalables listas para la comunidad profesional.</p>
                                     </div>
                                 </div>
                             </div>
@@ -347,32 +410,40 @@
                         <div class="absolute -left-[9px] top-1 w-4 h-4 bg-brand-500 rounded-full border-4 border-slate-50"></div>
                         <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
                             <span class="text-sm font-bold text-brand-600 tracking-wider uppercase mb-1 block">Abr 2018 - Actualidad</span>
-                            <h3 class="text-xl font-bold text-slate-900">Traffic Controller</h3>
+                            <h3 class="text-xl font-bold text-slate-900">Traffic Controller · AI & Operations Specialist</h3>
                             <p class="text-slate-500 font-medium mb-4">EOS Spain</p>
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Análisis integral de datos operativos y gestión del rendimiento. Responsable del seguimiento de KPIs en campañas y agentes. Encargado del soporte técnico de nivel 1 de la plataforma, asegurando la continuidad del negocio y optimizando las lógicas de enrutamiento.
-                            </p>
+                            <ul class="text-slate-600 text-sm leading-relaxed list-disc pl-4 space-y-2">
+                                <li>Análisis de datos operativos del Contact Center y generación de reportes avanzados.</li>
+                                <li>Gestión integral del rendimiento: monitorización de KPIs de campañas y agentes (AHT, SLAs, etc.).</li>
+                                <li>Resolución de incidencias: soporte técnico de primer nivel de la plataforma de telefonía (Genesys Cloud) y CRM.</li>
+                                <li>Liderazgo en la integración de automatizaciones basadas en IA para agilizar flujos repetitivos.</li>
+                            </ul>
                         </div>
                     </div>
 
                     <!-- Puesto 2 -->
                     <div class="relative pl-8 fade-in-up" style="transition-delay: 0.1s;">
                         <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-300 rounded-full border-4 border-slate-50"></div>
-                        <div class="group">
+                        <div class="group bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
                             <span class="text-sm font-bold text-slate-500 tracking-wider uppercase mb-1 block">May 2012 - Abr 2018</span>
                             <h3 class="text-xl font-bold text-slate-900">Gestor Telefónico de Recobro</h3>
-                            <p class="text-slate-500 font-medium mb-2">EOS Spain</p>
-                            <p class="text-slate-600 text-sm">Gestión telefónica y negociación de carteras de impagados en el exigente sector bancario y financiero. Desarrollo de fuertes habilidades de comunicación, resiliencia y orientación a objetivos.</p>
+                            <p class="text-slate-500 font-medium mb-3">EOS Spain</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Gestión telefónica y negociación de carteras de impagados de diversas entidades del sector bancario y financiero. Desarrollo de fuertes habilidades de comunicación, resiliencia y orientación a objetivos.
+                            </p>
                         </div>
                     </div>
 
                     <!-- Puesto 3 -->
                     <div class="relative pl-8 fade-in-up" style="transition-delay: 0.2s;">
                         <div class="absolute -left-[9px] top-1 w-4 h-4 bg-slate-300 rounded-full border-4 border-slate-50"></div>
-                        <div class="group">
-                            <span class="text-sm font-bold text-slate-500 tracking-wider uppercase mb-1 block">2007 - 2011</span>
-                            <h3 class="text-lg font-bold text-slate-900">Roles Previos</h3>
-                            <p class="text-slate-600 text-sm">Experiencia consolidada en departamentos de Preimpresión (Coreti Etiquetas) como Técnico en Serigrafía, y roles administrativos/control de stock (Interior Dekor), forjando una ética de trabajo rigurosa.</p>
+                        <div class="group bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+                            <span class="text-sm font-bold text-slate-500 tracking-wider uppercase mb-1 block">Sep 2009 - Ene 2011</span>
+                            <h3 class="text-lg font-bold text-slate-900">Técnico en serigrafía y fotomecánica</h3>
+                            <p class="text-slate-500 font-medium mb-2">Coreti Etiquetas (Preimpresión)</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Trabajo técnico en el departamento de preimpresión. Realización de planchas, pantallas y relieves necesarios para la impresión industrial de etiquetas, asegurando la máxima precisión visual.
+                            </p>
                         </div>
                     </div>
 
@@ -392,7 +463,7 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <div>
-                            <span class="text-xs font-bold text-brand-600 tracking-wider uppercase mb-1 block">Finaliza: Oct 2025</span>
+                            <span class="text-xs font-bold text-brand-600 tracking-wider uppercase mb-1 block">OCT 2025</span>
                             <h3 class="text-lg font-bold text-slate-900 leading-tight mb-1">Executive Master Power IA</h3>
                             <p class="text-slate-600 text-sm">Inteligencia Artificial aplicada a negocio.</p>
                             <p class="text-slate-500 text-sm font-medium mt-1">ThePower Business School</p>
@@ -402,16 +473,34 @@
                     <!-- Edu 2 -->
                     <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex gap-4 items-start fade-in-up" style="transition-delay: 0.1s;">
                         <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-slate-500 tracking-wider uppercase mb-1 block">2016-2018</span>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight mb-1">CFGM Técnico en Sistemas Microinformáticos y Redes</h3>
+                            <p class="text-slate-500 text-sm font-medium mt-1">ILERNA FP</p>
+                        </div>
+                    </div>
+
+                <div>
+                    <h2 class="text-3xl font-heading font-bold text-slate-900 mb-10 flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-brand-600"></i> Cursos y Certificados
+                    </h2>
+                <div class="space-y-6">    
+
+                    <!-- Edu 3 -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm flex gap-4 items-start fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center flex-shrink-0 text-xl">
                             <i class="fas fa-chart-pie"></i>
                         </div>
                         <div>
-                            <span class="text-xs font-bold text-slate-500 tracking-wider uppercase mb-1 block">Actualidad</span>
+                            <span class="text-xs font-bold text-slate-500 tracking-wider uppercase mb-1 block">DIC 2025</span>
                             <h3 class="text-lg font-bold text-slate-900 leading-tight mb-1">Power BI: Transformación Digital con IA</h3>
                             <p class="text-slate-500 text-sm font-medium mt-1">Udemy</p>
                         </div>
                     </div>
                     
-                    <!-- Bloque de Certificaciones -->
+                    <!-- Bloque de Certificaciones Google -->
                     <div class="bg-slate-800 text-white p-6 rounded-xl shadow-lg mt-8 fade-in-up" style="transition-delay: 0.2s;">
                         <h4 class="font-heading font-bold text-lg mb-4 flex items-center gap-2">
                             <i class="fab fa-google text-brand-400"></i> Google Cloud Skills Boost
@@ -428,25 +517,13 @@
                             </li>
                         </ul>
                     </div>
-                    
-                    <!-- Edu 3 -->
-                    <div class="flex gap-4 items-start px-2 mt-6 fade-in-up" style="transition-delay: 0.3s;">
-                        <div class="w-10 h-10 bg-slate-200 text-slate-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-md font-bold text-slate-800">CFGM Sistemas Microinformáticos y Redes</h3>
-                            <p class="text-slate-500 text-sm">ILERNA FP (2016 - 2018)</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Footer -->
+   <!-- Footer 
     <footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-heading font-bold text-white mb-6">¿Exploramos sinergias?</h2>
@@ -470,7 +547,37 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>-->
+
+    <!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-16 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-heading font-bold text-white mb-6">¿Exploramos sinergias?</h2>
+        <p class="text-slate-400 mb-10 text-lg">
+            La mejora continua nace de compartir conocimientos. Si te interesan las operaciones, el análisis de datos o cómo la IA está transformando el sector, me encantará conectar contigo.
+        </p>
+        <div class="flex justify-center mb-16">
+            <a href="https://www.linkedin.com/in/adrián-iglesias-muñoz" target="_blank" class="bg-[#0A66C2] hover:bg-[#004182] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg flex items-center justify-center gap-3 text-lg">
+                <i class="fab fa-linkedin text-2xl"></i> Conectar en LinkedIn
+            </a>
+        </div>
+        
+        <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+            <p>&copy; 2026 Adrián Iglesias Muñoz. A Coruña, Galicia.</p>
+            <div class="flex gap-3">
+                <a href="mailto:adrianiglesiasmunoz@gmail.com" aria-label="Email" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 border border-slate-700 hover:border-brand-600 flex items-center justify-center text-slate-300 hover:text-white transition-all">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://x.com/adrian_igmu" target="_blank" aria-label="X (Twitter)" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 border border-slate-700 hover:border-brand-600 flex items-center justify-center text-slate-300 hover:text-white transition-all">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/adrianiglesiasmunoz" target="_blank" aria-label="GitHub" class="w-10 h-10 rounded-full bg-slate-800 hover:bg-brand-600 border border-slate-700 hover:border-brand-600 flex items-center justify-center text-slate-300 hover:text-white transition-all">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Scripts Interactivos -->
     <script>
